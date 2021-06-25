@@ -1,13 +1,7 @@
-import { useEffect } from "react";
-import CanvasJSReact from "./lib/canvasjs/canvasjs.react";
+import CanvasJSReact from "../lib/canvasjs/canvasjs.react";
+import json_data from "../assets/opssat_analysis.json";
+import columns from "../assets/opssat_columns.json";
 
-import "./App.css";
-
-// import json_data from "./assets/opssat_analysis.json";
-import json_data from "./assets/opssat_analysis.json";
-import columns from "./assets/opssat_columns.json";
-
-var CanvasJS = CanvasJSReact.CanvasJS;
 var CanvasJSChart = CanvasJSReact.CanvasJSChart;
 
 function App() {

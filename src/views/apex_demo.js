@@ -1,7 +1,7 @@
 // import React from "react";
 import Chart from "react-apexcharts";
-import json_data from "./assets/opssat_analysis.json";
-import columns from "./assets/opssat_columns.json";
+import json_data from "../assets/opssat_analysis.json";
+import columns from "../assets/opssat_columns.json";
 
 const timestamps = json_data.data.timestamps.map((time) => {
   let temp = new Date(time);
@@ -18,10 +18,9 @@ let columns_to_ignore = [
   // "Electron 800 KeV",
   // "last_valid_packet_timestamp",
 ];
-// let columns_to_ignore = []
+
 const data = [];
 columns.forEach((col) => {
-  let m = false;
   if (columns_to_ignore.findIndex((el) => el === col) === -1) {
     let temp = {};
     temp.name = col;
@@ -31,12 +30,11 @@ columns.forEach((col) => {
       temp2.x = timestamps[i];
       temp2.y = json_data.data.values[col]["individual_values"][i].toFixed(2);
       temp.data.push(temp2);
-      if (temp2.y > 20) m = true;
     }
-    if (m) console.log(col);
     data.push(temp);
   }
 });
+
 const xAxisAnnotations = json_data.data.events.map((event) => {
   return {
     x: timestamps[event],
@@ -45,41 +43,40 @@ const xAxisAnnotations = json_data.data.events.map((event) => {
   };
 });
 
-const App = () => {
-  const options = {
-    chart: {
-      stacked: true,
-      height: 280,
-      type: "area",
-      zoom: {
-        autoScaleYaxis: true,
-      },
+const options = {
+  chart: {
+    stacked: true,
+    height: 280,
+    type: "area",
+    zoom: {
+      autoScaleYaxis: true,
     },
-    dataLabels: {
-      enabled: false,
+  },
+  dataLabels: {
+    enabled: false,
+  },
+  legend: {
+    show: false,
+  },
+  fill: {
+    type: "gradient",
+    gradient: {
+      shadeIntensity: 1,
+      opacityFrom: 0.7,
+      opacityTo: 0.9,
+      stops: [0, 90, 100],
     },
-    legend: {
-      show: false,
-    },
-    fill: {
-      type: "gradient",
-      gradient: {
-        shadeIntensity: 1,
-        opacityFrom: 0.7,
-        opacityTo: 0.9,
-        stops: [0, 90, 100],
-      },
-    },
-    // tooltip: false,
-    xaxis: {
-      type: "datetime",
-    },
-    annotations: {
-      xaxis: xAxisAnnotations,
-    },
-  };
-  const series = data;
+  },
+  // tooltip: false,
+  xaxis: {
+    type: "datetime",
+  },
+  annotations: {
+    xaxis: xAxisAnnotations,
+  },
+};
 
+const App = () => {
   return (
     <div
       style={{
@@ -92,7 +89,7 @@ const App = () => {
       <div>
         <h2>Opssat1-short analysis with normalized values</h2>
         <div className="mixed-chart">
-          <Chart options={options} series={series} type="area" width="1000" />
+          <Chart options={options} series={data} type="area" width="1000" />
         </div>
       </div>
     </div>
