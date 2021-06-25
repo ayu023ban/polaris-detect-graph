@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/polaris-detect-graph/static/css/main.6dea0f05.chunk.css",
+    "main.js": "/polaris-detect-graph/static/js/main.880774e9.chunk.js",
+    "main.js.map": "/polaris-detect-graph/static/js/main.880774e9.chunk.js.map",
+    "runtime-main.js": "/polaris-detect-graph/static/js/runtime-main.61c87e77.js",
+    "runtime-main.js.map": "/polaris-detect-graph/static/js/runtime-main.61c87e77.js.map",
+    "static/js/2.335434f2.chunk.js": "/polaris-detect-graph/static/js/2.335434f2.chunk.js",
+    "static/js/2.335434f2.chunk.js.map": "/polaris-detect-graph/static/js/2.335434f2.chunk.js.map",
+    "static/js/3.cf1ea5fd.chunk.js": "/polaris-detect-graph/static/js/3.cf1ea5fd.chunk.js",
+    "static/js/3.cf1ea5fd.chunk.js.map": "/polaris-detect-graph/static/js/3.cf1ea5fd.chunk.js.map",
+    "index.html": "/polaris-detect-graph/index.html",
+    "static/css/main.6dea0f05.chunk.css.map": "/polaris-detect-graph/static/css/main.6dea0f05.chunk.css.map",
+    "static/js/2.335434f2.chunk.js.LICENSE.txt": "/polaris-detect-graph/static/js/2.335434f2.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.61c87e77.js",
+    "static/js/2.335434f2.chunk.js",
+    "static/css/main.6dea0f05.chunk.css",
+    "static/js/main.880774e9.chunk.js"
+  ]
+}
