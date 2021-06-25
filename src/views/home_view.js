@@ -7,21 +7,21 @@ const HomeView = () => {
     <div>
       <button
         onClick={() => {
-          history.push("/apexcharts");
+          history.push("/polaris-detect-graph/apexcharts");
         }}
       >
         ApexChart version{" "}
       </button>
       <button
         onClick={() => {
-          history.push("/canvasjs");
+          history.push("/polaris-detect-graph/canvasjs");
         }}
       >
         CanvasJs version{" "}
       </button>
       <button
         onClick={() => {
-          history.push("/fusioncharts");
+          history.push("/polaris-detect-graph/fusioncharts");
         }}
       >
         Fusion Charts version{" "}

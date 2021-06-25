@@ -9,10 +9,22 @@ const CustomRouter = () => {
   return (
     <Router>
       <Switch>
-        <Route path="/" exact component={HomeView} />
-        <Route path="/canvasjs" exact component={CanvasDemo} />
-        <Route path="/apexcharts" exact component={ApexDemo} />
-        <Route path="/fusioncharts" exact component={FusionDemo} />
+        <Route path="/polaris-detect-graph/" exact component={HomeView} />
+        <Route
+          path="/polaris-detect-graph/canvasjs"
+          exact
+          component={CanvasDemo}
+        />
+        <Route
+          path="/polaris-detect-graph/apexcharts"
+          exact
+          component={ApexDemo}
+        />
+        <Route
+          path="/polaris-detect-graph/fusioncharts"
+          exact
+          component={FusionDemo}
+        />
       </Switch>
     </Router>
   );
